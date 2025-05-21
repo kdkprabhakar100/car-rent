@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Car Rent</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="assets/images/Logo.svg" alt="logo" id="logo" />
+
+        <div class="search-bar">
+          <img
+            src="assets/icons/search-normal.svg"
+            alt="searchicon"
+            class="search-icon"
+          />
+          <input
+            type="text"
+            placeholder="Search something here"
+            id="search-text"
+          />
+          <img src="assets/icons/filter.svg" alt="filter" class="filter-icon" />
+        </div>
+
+        <div class="nav-icons">
+          <div class="hidden-icons" id="hiddenIcons">
+            <div class="icon-circle">
+              <img src="assets/icons/heart.png" alt="heart" />
+            </div>
+
+            <div class="icon-circle notification-container">
+              <img src="assets/icons/bell.png" alt="bell" />
+              <img
+                src="assets/icons/Notif.png"
+                alt="notification"
+                class="notif-img"
+              />
+            </div>
+
+            <div class="icon-circle">
+              <img src="assets/icons/setting.png" alt="settings" />
+            </div>
+          </div>
+
+          <div class="user-profile" onclick="toggleIcons()">
+            <img src="assets/images/Image.png" alt="user" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script>
+      function toggleIcons() {
+        const icons = document.getElementById("hiddenIcons");
+        icons.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
