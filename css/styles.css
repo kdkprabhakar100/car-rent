@@ -9,11 +9,11 @@
   padding: 20px 60px;
 }
 
-#logo {
+.navbar__logo {
   height: 40px;
 }
 
-.search-bar {
+.navbar__search-bar {
   position: relative;
   display: flex;
   align-items: center;
@@ -21,41 +21,65 @@
   height: 44px;
 }
 
-.search-bar input {
-  padding: 10px 40px 10px 40px;
+.search-bar__input {
+  padding: 10px 40px;
   border: 1px solid #c3d4e966;
   border-radius: 20px;
   width: 400px;
   font-size: 14px;
 }
-
-.search-icon {
+#search-bar__text {
+  margin-left: 10px;
+}
+.search-bar__icon {
   position: absolute;
   left: 20px;
 }
 
-.filter-icon {
+.search-bar__filter-icon {
   position: absolute;
   right: 20px;
   width: 20px;
   height: 20px;
 }
 
-.nav-icons {
+.navbar__icons {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-#search-text {
-  margin-left: 10px;
+.icons__hidden {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-.notification-container {
+.icons__circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.icons__circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.icons__notification-container {
   position: relative;
 }
 
-.notification-container::after {
+.icons__notification-container::after {
   content: "";
   position: absolute;
   top: 1px;
@@ -68,7 +92,7 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-.user-profile img {
+.navbar__user-profile .user-profile__img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -76,76 +100,39 @@
   cursor: pointer;
 }
 
-.icon-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid #e4e4e4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
-  cursor: pointer;
-}
-
-.icon-circle img:not(.notif-img) {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.notif-img {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  width: 11px;
-  height: 11px;
-}
-
-.hidden-icons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
+/* Responsive (Mobile) */
 @media screen and (max-width: 1100px) {
   .navbar {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px 20px;
     gap: 15px;
-    align-items: center;
-    justify-content: space-between;
   }
 
-  #logo {
+  .navbar__logo {
     order: 1;
     height: 35px;
   }
 
-  .user-profile {
+  .navbar__user-profile {
     order: 3;
   }
 
-  .search-bar {
+  .navbar__search-bar {
     order: 4;
     width: 100%;
     margin-top: 15px;
   }
 
-  .search-bar input {
-    width: 100%;
-    padding: 8px 40px 8px 40px;
+  .search-bar__input {
+    padding-left: 64px;
   }
 
-  .nav-icons {
+  .navbar__icons {
     order: 2;
   }
 
-  .hidden-icons {
+  .icons__hidden {
     display: none;
     position: absolute;
     top: 70px;
@@ -157,27 +144,27 @@
     z-index: 100;
   }
 
-  .hidden-icons.active {
+  .icons__hidden.active {
     display: flex;
     flex-direction: column;
   }
 
-  .user-profile img {
+  .user-profile__img {
     width: 40px;
     height: 40px;
   }
 
-  .icon-circle {
+  .icons__circle {
     width: 40px;
     height: 40px;
   }
 
-  .icon-circle img:not(.notif-img) {
+  .icons__circle img {
     width: 20px;
     height: 20px;
   }
 
-  .notif-img {
+  .icons__notification-container::after {
     width: 9px;
     height: 9px;
   }

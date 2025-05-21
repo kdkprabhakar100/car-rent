@@ -9,43 +9,53 @@
   <body>
     <header>
       <nav class="navbar">
-        <img src="assets/images/Logo.svg" alt="logo" id="logo" />
+        <img src="assets/images/Logo.svg" alt="logo" class="navbar__logo" />
 
-        <form class="search-bar">
+        <form class="navbar__search-bar">
           <img
             src="assets/icons/search-normal.svg"
-            alt="searchicon"
-            class="search-icon"
+            alt="search icon"
+            class="search-bar__icon"
           />
           <input
             type="text"
             placeholder="Search something here"
-            id="search-text"
+            class="search-bar__input"
+            id="search-bar__text"
           />
-          <img src="assets/icons/filter.svg" alt="filter" class="filter-icon" />
+          <img
+            src="assets/icons/filter.svg"
+            alt="filter"
+            class="search-bar__filter-icon"
+          />
         </form>
 
-        <div class="nav-icons">
-          <div class="hidden-icons" id="hiddenIcons">
-            <div class="icon-circle">
+        <div class="navbar__icons">
+          <div class="icons__hidden" id="hiddenIcons">
+            <div class="icons__circle">
               <img src="assets/icons/heart.png" alt="heart" />
             </div>
 
-            <div class="icon-circle notification-container">
+            <div class="icons__circle icons__notification-container">
               <img src="assets/icons/bell.png" alt="bell" />
             </div>
 
-            <div class="icon-circle">
+            <div class="icons__circle">
               <img src="assets/icons/setting.png" alt="settings" />
             </div>
           </div>
 
-          <div class="user-profile" onclick="toggleIcons()">
-            <img src="assets/images/Image.png" alt="user" />
+          <div class="navbar__user-profile" onclick="toggleIcons()">
+            <img
+              src="assets/images/Image.png"
+              alt="user"
+              class="user-profile__img"
+            />
           </div>
         </div>
       </nav>
     </header>
+
     <script src="/js/script.js"></script>
   </body>
 </html>
