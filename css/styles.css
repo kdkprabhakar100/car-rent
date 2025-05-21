@@ -48,11 +48,6 @@
   gap: 20px;
 }
 
-.nav-icons img {
-  display: flex;
-  align-items: center;
-}
-
 #search-text {
   margin-left: 10px;
 }
