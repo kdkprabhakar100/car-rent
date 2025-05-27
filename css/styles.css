@@ -1,3 +1,4 @@
+/* navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -169,6 +170,7 @@
   }
 }
 
+/* promo */
 .promo {
   display: flex;
   gap: 32px;
@@ -315,5 +317,238 @@
   .promo__image {
     padding: 0;
     margin-top: 12px;
+  }
+}
+
+/* container */
+.pickndrop-container {
+  display: flex;
+  column-gap: 20px;
+  width: calc(100% - 128px);
+  max-width: 1340px;
+  height: auto;
+  margin: 20px auto 0;
+  padding: 0 64px;
+  position: relative;
+}
+
+.pickup-box,
+.dropoff-box {
+  width: 582px;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e3e8f2;
+  padding: 16px 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pickup-box {
+  margin-right: 44px;
+}
+
+.dropoff-box {
+  margin-left: 44px;
+}
+
+.swap-btn {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 0px);
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.swap-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.content-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.field {
+  flex: 1;
+  min-width: 120px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  color: #1a202c;
+  margin-bottom: 8px;
+}
+
+.field select,
+.field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e3e8f2;
+  border-radius: 4px;
+  background: #f6f7f9;
+  color: #90a3bf;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1300px) {
+  .pickndrop-container {
+    width: calc(100% - 64px);
+    padding: 0 32px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pickup-box,
+  .dropoff-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  .swap-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .swap-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pickndrop-container {
+    width: calc(100% - 24px);
+    padding: 0 12px;
+    margin-top: 10px;
+  }
+
+  .pickup-box,
+  .dropoff-box {
+    padding: 12px 16px;
+  }
+
+  .section-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .swap-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .swap-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pickndrop-container {
+    width: calc(100% - 24px);
+    padding: 0 12px;
+    margin-top: 10px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pickup-box,
+  .dropoff-box {
+    padding: 12px 16px;
+    width: 100%;
+    height: auto;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 8px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .field {
+    width: calc((100% - 16px) / 3);
+    min-width: 0;
+    height: auto;
+  }
+
+  .field label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  .field select {
+    width: 100%;
+    height: 36px;
+    padding: 6px 8px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+
+  .swap-btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  .swap-btn img {
+    width: 100px;
+    height: 100px;
   }
 }
