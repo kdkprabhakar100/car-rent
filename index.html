@@ -91,27 +91,30 @@
     <div class="pickndrop-container">
       <!-- Pick-Up Box -->
       <div class="pickup-box">
-        <h3 class="section-title">Pick-Up</h3>
+        <div class="radio-box">
+          <input type="radio" name="pickupdrop" id="pickup-radio" />
+          <h3 class="section-title">Pick - Up</h3>
+        </div>
         <div class="content-box">
           <div class="field">
-            <label data-short="Location"><span>Locations</span></label>
-            <select>
+            <label for="pickup-location">Locations</label>
+            <select id="pickup-location">
               <option value="" disabled selected hidden>
                 Select your city
               </option>
             </select>
           </div>
           <div class="field">
-            <label data-short="Date"><span>Date</span></label>
-            <select>
+            <label for="pickup-date">Date</label>
+            <select id="pickup-date">
               <option value="" disabled selected hidden>
                 Select your date
               </option>
             </select>
           </div>
           <div class="field">
-            <label data-short="Time"><span>Time</span></label>
-            <select>
+            <label for="pickup-time">Time</label>
+            <select id="pickup-time">
               <option value="" disabled selected hidden>
                 Select your time
               </option>
@@ -120,33 +123,37 @@
         </div>
       </div>
 
-      <div class="swap-btn">
-        <img src="assets/icons/Switch.png" alt="Swap" width="60" height="60" />
-      </div>
+      <!-- Swap Button -->
+      <button class="swap-btn" aria-label="Swap Pickup and Drop-off">
+        <img src="assets/icons/Switch.png" alt="Swap" />
+      </button>
 
-      <!-- Drop-Off Box  -->
+      <!-- Drop-Off Box -->
       <div class="dropoff-box">
-        <h3 class="section-title">Drop-Off</h3>
+        <div class="radio-box">
+          <input type="radio" name="pickupdrop" id="dropoff-radio" />
+          <h3 class="section-title">Drop - Off</h3>
+        </div>
         <div class="content-box">
           <div class="field">
-            <label data-short="Location"><span>Locations</span></label>
-            <select>
+            <label for="dropoff-location">Locations</label>
+            <select id="dropoff-location">
               <option value="" disabled selected hidden>
                 Select your city
               </option>
             </select>
           </div>
           <div class="field">
-            <label data-short="Date"><span>Date</span></label>
-            <select>
+            <label for="dropoff-date">Date</label>
+            <select id="dropoff-date">
               <option value="" disabled selected hidden>
                 Select your date
               </option>
             </select>
           </div>
           <div class="field">
-            <label data-short="Time"><span>Time</span></label>
-            <select>
+            <label for="dropoff-time">Time</label>
+            <select id="dropoff-time">
               <option value="" disabled selected hidden>
                 Select your time
               </option>
@@ -155,6 +162,7 @@
         </div>
       </div>
     </div>
+    <!-- popular-car -->
     <section class="popular-cars">
       <div class="popular-cars__header">
         <h2 class="popular-cars__title">Popular Car</h2>
@@ -163,9 +171,76 @@
 
       <div class="popular-cars__grid" id="popularCarsGrid"></div>
     </section>
+    <!-- for recommendation -->
+    <section class="popular-cars">
+      <div class="popular-cars__header">
+        <h2 class="popular-cars__title">Recomendation Car</h2>
+      </div>
+
+      <div class="recomend-cars__grid car-image" id="recomendationCar"></div>
+    </section>
+    <section class="car-show">
+      <button class="car-show__more">Show More Car</button>
+      <p class="car-show-text">120 Car</p>
+    </section>
+
+    <section class="bottom-nav">
+      <div class="bottom-nav__container">
+        <div class="bottom-nav__top">
+          <img
+            src="assets/images/Logo.svg"
+            alt="logo"
+            class="bottom-nav__logo"
+          />
+          <p class="bottom-nav__text">
+            Our vision is to provide convenience and help increase your sales
+            business.
+          </p>
+        </div>
+        <div class="bottom-nav__links">
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">About</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Featured</a></li>
+              <li><a href="#">Partnership</a></li>
+              <li><a href="#">Business Relation</a></li>
+            </ul>
+          </div>
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">Community</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Podcast</a></li>
+              <li><a href="#">Invite a friend</a></li>
+            </ul>
+          </div>
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">Socials</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav__bottom">
+        <div class="bottom-nav__left">
+          <a href="#">©2022 MORENT. All rights reserved</a>
+        </div>
+        <div class="bottom-nav__right">
+          <a href="#">Privacy & Policy</a>
+          <a href="#">Terms & Condition</a>
+        </div>
+      </div>
+    </section>
 
     <script src="/js/script.js "></script>
     <script src="/js/select.js "></script>
     <script src="/js/car.js"></script>
+    <script src="/js/recomend.js"></script>
   </body>
 </html>
