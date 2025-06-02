@@ -6,56 +6,241 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Car Rent</title>
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <img src="assets/images/Logo.svg" alt="logo" id="logo" />
+        <img src="assets/images/Logo.svg" alt="logo" class="navbar__logo" />
 
-        <div class="search-bar">
+        <form class="navbar__search-bar">
           <img
             src="assets/icons/search-normal.svg"
-            alt="searchicon"
-            class="search-icon"
+            alt="search icon"
+            class="search-bar__icon"
           />
           <input
             type="text"
             placeholder="Search something here"
-            id="search-text"
+            class="search-bar__input"
+            id="search-bar__text"
           />
-          <img src="assets/icons/filter.svg" alt="filter" class="filter-icon" />
-        </div>
+          <img
+            src="assets/icons/filter.svg"
+            alt="filter"
+            class="search-bar__filter-icon"
+          />
+        </form>
 
-        <div class="nav-icons">
-          <div class="hidden-icons" id="hiddenIcons">
-            <div class="icon-circle">
+        <div class="navbar__icons">
+          <div class="icons__hidden" id="hiddenIcons">
+            <div class="icons__circle">
               <img src="assets/icons/heart.png" alt="heart" />
             </div>
 
-            <div class="icon-circle notification-container">
+            <div class="icons__circle icons__notification-container">
               <img src="assets/icons/bell.png" alt="bell" />
-              <img
-                src="assets/icons/Notif.png"
-                alt="notification"
-                class="notif-img"
-              />
             </div>
 
-            <div class="icon-circle">
+            <div class="icons__circle">
               <img src="assets/icons/setting.png" alt="settings" />
             </div>
           </div>
 
-          <div class="user-profile" onclick="toggleIcons()">
-            <img src="assets/images/Image.png" alt="user" />
+          <div class="navbar__user-profile" onclick="toggleIcons()">
+            <img
+              src="assets/images/Image.png"
+              alt="user"
+              class="user-profile__img"
+            />
           </div>
         </div>
       </nav>
     </header>
-    <script>
-      function toggleIcons() {
-        const icons = document.getElementById("hiddenIcons");
-        icons.classList.toggle("active");
-      }
-    </script>
+
+    <section class="promo">
+      <div class="promo__card">
+        <div class="promo__content">
+          <h3 class="promo__title">
+            Ease of doing a car rental safely and reliably. Of course at a low
+            price.
+          </h3>
+          <button class="promo__button promo__button--blue">Rental Car</button>
+        </div>
+        <img
+          src="/assets/images/image 7.png"
+          alt="firstcar"
+          class="promo__image"
+        />
+      </div>
+
+      <div class="promo__card">
+        <div class="promo__content">
+          <h3 class="promo__title">
+            Providing cheap car rental services and safe and comfortable
+            facilities.
+          </h3>
+          <button class="promo__button promo__button--green">Rental Car</button>
+        </div>
+        <img
+          src="/assets/images/image 8.png"
+          alt="secondcar"
+          class="promo__image"
+        />
+      </div>
+    </section>
+    <div class="pickndrop-container">
+      <!-- Pick-Up Box -->
+      <div class="pickup-box">
+        <div class="radio-box">
+          <input type="radio" name="pickupdrop" id="pickup-radio" />
+          <h3 class="section-title">Pick - Up</h3>
+        </div>
+        <div class="content-box">
+          <div class="field">
+            <label for="pickup-location">Locations</label>
+            <select id="pickup-location">
+              <option value="" disabled selected hidden>
+                Select your city
+              </option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pickup-date">Date</label>
+            <select id="pickup-date">
+              <option value="" disabled selected hidden>
+                Select your date
+              </option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="pickup-time">Time</label>
+            <select id="pickup-time">
+              <option value="" disabled selected hidden>
+                Select your time
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swap Button -->
+      <button class="swap-btn" aria-label="Swap Pickup and Drop-off">
+        <img src="assets/icons/Switch.png" alt="Swap" />
+      </button>
+
+      <!-- Drop-Off Box -->
+      <div class="dropoff-box">
+        <div class="radio-box">
+          <input type="radio" name="pickupdrop" id="dropoff-radio" />
+          <h3 class="section-title">Drop - Off</h3>
+        </div>
+        <div class="content-box">
+          <div class="field">
+            <label for="dropoff-location">Locations</label>
+            <select id="dropoff-location">
+              <option value="" disabled selected hidden>
+                Select your city
+              </option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dropoff-date">Date</label>
+            <select id="dropoff-date">
+              <option value="" disabled selected hidden>
+                Select your date
+              </option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dropoff-time">Time</label>
+            <select id="dropoff-time">
+              <option value="" disabled selected hidden>
+                Select your time
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- popular-car -->
+    <section class="popular-cars">
+      <div class="popular-cars__header">
+        <h2 class="popular-cars__title">Popular Car</h2>
+        <a href="#" class="popular-cars__view-all">View all</a>
+      </div>
+
+      <div class="popular-cars__grid" id="popularCarsGrid"></div>
+    </section>
+    <!-- for recommendation -->
+    <section class="popular-cars">
+      <div class="popular-cars__header">
+        <h2 class="popular-cars__title">Recomendation Car</h2>
+      </div>
+
+      <div class="recomend-cars__grid car-image" id="recomendationCar"></div>
+    </section>
+    <section class="car-show">
+      <button class="car-show__more">Show More Car</button>
+      <p class="car-show-text">120 Car</p>
+    </section>
+
+    <section class="bottom-nav">
+      <div class="bottom-nav__container">
+        <div class="bottom-nav__top">
+          <img
+            src="assets/images/Logo.svg"
+            alt="logo"
+            class="bottom-nav__logo"
+          />
+          <p class="bottom-nav__text">
+            Our vision is to provide convenience and help increase your sales
+            business.
+          </p>
+        </div>
+        <div class="bottom-nav__links">
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">About</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Featured</a></li>
+              <li><a href="#">Partnership</a></li>
+              <li><a href="#">Business Relation</a></li>
+            </ul>
+          </div>
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">Community</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Podcast</a></li>
+              <li><a href="#">Invite a friend</a></li>
+            </ul>
+          </div>
+          <div class="bottom-nav__column">
+            <h3 class="bottom-nav__heading">Socials</h3>
+            <ul class="bottom-nav__list">
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav__bottom">
+        <div class="bottom-nav__left">
+          <a href="#">©2022 MORENT. All rights reserved</a>
+        </div>
+        <div class="bottom-nav__right">
+          <a href="#">Privacy & Policy</a>
+          <a href="#">Terms & Condition</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="/js/script.js "></script>
+    <script src="/js/select.js "></script>
+    <script src="/js/car.js"></script>
+    <script src="/js/recomend.js"></script>
   </body>
 </html>
