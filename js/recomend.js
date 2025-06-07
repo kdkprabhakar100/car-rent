@@ -1,7 +1,7 @@
 const recomendCars = [
   {
     id: 1,
-    model: "All New Rush",
+    model: "AllNewRush",
     type: "SUV",
     image: "/assets/recomendation/10.png",
     fuel: "70L",
@@ -23,7 +23,7 @@ const recomendCars = [
   },
   {
     id: 3,
-    model: "All New Teriosigegg",
+    model: "AllNewTeriosigegg",
     type: "Sedan",
     image: "/assets/recomendation/12.png",
     fuel: "90L",
@@ -45,7 +45,7 @@ const recomendCars = [
   },
   {
     id: 5,
-    model: "MG ZX Exclusice",
+    model: "MG ZX Exclusive",
     type: "Hatchback",
     image: "/assets/recomendation/14.png",
     fuel: "70L",
@@ -93,49 +93,52 @@ const recomendGrid = document.getElementById("recomendationCar");
 const recomendCarsHTML = recomendCars
   .map(
     (car) => `
-    <article class="car-card car-card-recomen">
-      <div class="car-card__header">
-        <div>
-          <h3 class="car-card__model">${car.model}</h3>
-          <p class="car-card__type">${car.type}</p>
+    <article class="car-card__main">
+      <div class="car-card__headerr">
+        <div class="car-card__left">
+          <h3 class="car-card__modelr">${car.model}</h3>
+          <p class="car-card__typer">${car.type}</p>
         </div>
-        <button class="car-card__heart" aria-label="Add to favorites">
+        <button class="car-card__heartr" aria-label="Add to favorites">
           <img src="/assets/icons/Vector.png" alt="favourite" />
         </button>
       </div>
 
-      <div class="car-card__image-container">
-        <img src="${car.image}" alt="${car.model} car" class="car-card__image" />
+      <div class="car-card__flex">
+      <div class="car-card__image-containerr">
+        <img src="${car.image}" alt="${car.model} car" class="car-card__imager" />
       </div>
 
-      <div class="car-card__specs " id="card-recomendation" >
-        <div class="specs_gasoline">
+      <div class="car-card__specsr">
+        <div class="specs_gasoliner">
           <img src="/assets/icons/gas-station.png" alt="gas" />
           <p>${car.fuel}</p>
         </div>
-        <div class="specs_car">
+        <div class="specs_carr">
           <img src="/assets/icons/Car.png" alt="car" />
           <p>${car.transmission}</p>
         </div>
-        <div class="specs__capacity">
+        <div class="specs__capacityr">
           <img src="/assets/icons/profile-2user.png" alt="capacity" />
           <p>${car.capacity}</p>
         </div>
       </div>
+      </div>
+    
 
-    <div class="car-card__pricing">
-      <div class="car-card__price">
-        <div class="car-card__current">
-          <p class="car-card__current-price">
-            ${car.currentprice}/<span id="car-card__day">day</span>
-          </p>
-          <p class="car-card__original-price">${car.originalprice}</p>
+      <div class="car-card__pricingr">
+        <div class="car-card__price">
+          <div class="car-card__currentr">
+            <p class="car-card__current-price">
+              ${car.currentprice}/<span id="car-card__day">day</span>
+            </p>
+            <p class="car-card__original-price">${car.originalprice}</p>
+          </div>
+        </div>
+        <div>
+          <button class="car-card__button">Rent Now</button>
         </div>
       </div>
-      <div>
-        <button class="car-card__button">Rent Now</button>
-      </div>
-    </div>
     </article>
   `
   )

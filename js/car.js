@@ -52,7 +52,7 @@ const carCardsHTML = cars
     (car) => `
   <article class="car-card">
     <div class="car-card__header">
-      <div>
+      <div class="car-card__top">
         <h3 class="car-card__model">${car.model}</h3>
         <p class="car-card__type">${car.type}</p>
       </div>
@@ -105,6 +105,7 @@ const carCardsHTML = cars
         <button class="car-card__button">Rent Now</button>
       </div>
     </div>
+   
   </article>
 `
   )
